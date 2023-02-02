@@ -4,6 +4,7 @@ const btnDarkMode = document.querySelector(".dark-mode-btn");
 if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ) {
     btnDarkMode.classList.add("dark-mode-btn--active");
 	document.body.classList.add("dark");
+	document.body.classList.add("dark");
 }
 
 // 2. Проверка темной темы в localStorage
