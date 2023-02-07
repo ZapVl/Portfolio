@@ -317,10 +317,14 @@ html, body {
 }
 
 .project {
+    position: relative;
     max-width: 370px;
     background-color: var(--project-card-bg);
     box-shadow: var(--box-shadow);
     border-radius: 10px;
+}
+.project:hover{
+    bottom: 10px;
 }
 
 .project__img {
@@ -412,7 +416,18 @@ html, body {
 }
 
 .copyright {
+    
     font-size: 16px;
+}
+.social__item{
+    position: relative;
+    transition-duration: 0.3s;
+}
+.social__item:hover{
+    bottom: 2px;
+}
+.telegram:hover{
+    padding-bottom: 0px;
 }
 
 .copyright p + p {
@@ -508,3 +523,4 @@ html, body {
     }
 
 }
+

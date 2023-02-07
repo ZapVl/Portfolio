@@ -1,4 +1,5 @@
 const btnDarkMode = document.querySelector(".dark-mode-btn");
+const getLinkCv = document.querySelector('#cv')
 
 // 1. Проверка темной темы на уровне системных настроек
 if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ) {
@@ -44,3 +45,4 @@ btnDarkMode.onclick = function () {
         localStorage.setItem("darkMode", "light");
     }
 };
+
