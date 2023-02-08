@@ -223,7 +223,11 @@ html, body {
 
 .header__wrapper {
     padding: 0 15px;
-    max-width: 660px;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 40px;
 }
 
 .header__title {
@@ -234,7 +238,7 @@ html, body {
 }
 
 .header__title strong {
-    font-size: 60px;
+    font-size: 40px;
     font-weight: 700;
 }
 
@@ -249,11 +253,20 @@ html, body {
     font-size: 18px;
     line-height: 1.333;
 }
+.header__info{
+    width: 50%;
+    line-height: 150%;
+}
+
 
 .header__text p + p{
     margin-top: 0.5em;
 }
-
+.header__photo{
+    max-width: 40%;
+    height: 100%;
+    object-fit: cover;
+}
 /* Btn */
 
 .btn {
@@ -306,6 +319,12 @@ html, body {
 .btn-outline:active {
     position: relative;
     top: 1px;
+}
+.border--link{
+    transition-duration: 0.5s;
+}
+.border--link:hover{
+    border-bottom: solid white 1px;
 }
 
 /* Projects  */
@@ -435,7 +454,27 @@ html, body {
 .copyright p + p {
     margin-top: 0.5em;
 }
+@media (max-width: 992px){
+    .header__wrapper{
+        flex-direction: column;
 
+    }
+    .header__wrapper .header__info p{
+        width: 100%;
+        font-size: 14px;
+    }
+    .header__photo{
+        min-width: 40%;
+    }
+}
+@media (max-width: 717px){
+    .btn{
+        margin-bottom: 10px;
+    }
+    .header__photo{
+        min-width: 45%;
+    }
+}
 @media (max-width: 620px) {
 
     /* Header  */
@@ -451,6 +490,15 @@ html, body {
     .header__title strong {
         font-size: 40px;
     }
+    .header__wrapper .header__info{
+        width: 100%;
+        font-size: 12px;
+
+    }
+    .header__photo{
+        min-width: 50%;
+    }
+
 
     /* Nav */
 
@@ -525,4 +573,8 @@ html, body {
     }
 
 }
-
+@media (max-width: 500px) {
+    .header__photo{
+        min-width: 60%;
+    }
+}
